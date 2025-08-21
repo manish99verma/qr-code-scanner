@@ -15,9 +15,7 @@ package.
 
 ## 📱Screenshots
 
-<img src="./screenshots/screenshot-1.png" alt="QR Code" width="30%"/>
-<img src="./screenshots/screenshot-2.png" alt="QR Code" width="30%"/>
-<img src="./screenshots/screenshot-3.png" alt="QR Code" width="30%"/>
+<img src="./screenshots/screenshot-1.png" alt="QR Code" width="30%"/> <img src="./screenshots/screenshot-2.png" alt="QR Code" width="30%"/> <img src="./screenshots/screenshot-3.png" alt="QR Code" width="30%"/>
 
 ## 📌 Features
 
