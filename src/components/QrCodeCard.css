@@ -1,0 +1,122 @@
+.main-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-width: 420px;
+  padding: 24px 32px;
+  background-color: white;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  border: 1px solid rgb(125, 125, 125);
+}
+
+.card-title-container {
+  width: 95%;
+  background-color: rgb(255, 67, 67);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+  transform: translateY(-40px);
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  padding: 24px 24px;
+  border: 1px solid rgb(125, 125, 125);
+}
+
+.qr-image {
+  width: 100%;
+}
+
+.title {
+  color: black;
+}
+
+.subtitle {
+  color: white;
+}
+
+.url-input-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 18px;
+}
+
+.url-input {
+  width: 100%;
+  padding: 12px 12px;
+  border: 2px solid rgb(46, 46, 46);
+  border-radius: 8px;
+  font-size: medium;
+  letter-spacing: 1px;
+  transition: border-color 0.3s ease;
+  outline: none;
+}
+
+.url-input:focus {
+  border: 3px solid rgb(0, 147, 173);
+}
+
+.btn {
+  width: 100%;
+  color: white;
+  font-size: 1rem;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
+.btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.generate-btn {
+  background-color: rgb(50, 50, 50);
+}
+
+.clear-btn {
+  flex: 0.35;
+  background-color: rgb(50, 50, 50);
+}
+
+.download-btn {
+  flex: 0.6;
+  background-color: green;
+}
+
+.result-action-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.error-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 45px;
+  border: 2px solid rgb(255, 70, 37);
+  border-radius: 8px;
+  padding: 12px;
+  gap: 8px;
+  color: red;
+}
