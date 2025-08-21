@@ -48,8 +48,17 @@
   gap: 18px;
 }
 
-.url-input {
+.url-input-container {
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.url-input {
+  display: flex;
+  flex: 1;
   padding: 12px 12px;
   border: 2px solid rgb(46, 46, 46);
   border-radius: 8px;
@@ -57,6 +66,21 @@
   letter-spacing: 1px;
   transition: border-color 0.3s ease;
   outline: none;
+}
+
+.paste-btn {
+  padding: 8px;
+  background-color: rgb(227, 227, 227);
+  border: 1px solid rgb(122, 122, 122);
+  color: rgb(0, 94, 145);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.paste-btn svg {
+  width: 20px;
+  height: 20px;
 }
 
 .url-input:focus {
@@ -77,10 +101,6 @@
   gap: 6px;
   height: 50px;
   transition: all 0.3s ease-in-out;
-}
-
-.btn:hover {
-  opacity: 0.7;
 }
 
 .btn svg {

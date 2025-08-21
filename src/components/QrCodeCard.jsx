@@ -5,6 +5,7 @@ import {
   FaInfoCircle,
   FaDownload,
   FaRegTimesCircle,
+  FaPaste,
 } from "react-icons/fa";
 import { generateQRCode, isValidURL } from "../utils";
 
@@ -47,6 +48,17 @@ function QrCodeCard() {
     setUrl("");
   };
 
+  const handlePaste = async () => {
+    setQrImageUrl("");
+
+    try {
+      const pastedUrl = await navigator.clipboard.readText();
+      setUrl(pastedUrl);
+    } catch (err) {
+      setError(err.message || "Unable to read clipboard!");
+    }
+  };
+
   return (
     <div className="main-card">
       <div className="card-title-container">
@@ -61,18 +73,30 @@ function QrCodeCard() {
       </div>
 
       <form className="url-input-form" onSubmit={handleFormSubmit}>
-        <input
-          type="url"
-          className="url-input"
-          placeholder="Enter a valid URL"
-          name="url"
-          id="url"
-          value={url}
-          onChange={onUrlChange}
-        />
+        <div className="url-input-container">
+          <input
+            type="url"
+            className="url-input"
+            placeholder="Enter a valid URL"
+            name="url"
+            id="url"
+            value={url}
+            onChange={onUrlChange}
+          />
+          <button
+            onClick={handlePaste}
+            title="Paste Url"
+            className="paste-btn"
+            type="button"
+          >
+            <FaPaste />
+          </button>
+        </div>
+
         {qrImageUrl ? (
           <div className="result-action-container">
             <button
+              title="Clear url"
               onClick={handleClear}
               className="btn clear-btn"
               type="button"
@@ -81,6 +105,7 @@ function QrCodeCard() {
               <span>Clear</span>
             </button>
             <a
+              title="Download QR Code"
               download={"qrCode.png"}
               href={qrImageUrl}
               className="btn download-btn"
@@ -90,7 +115,12 @@ function QrCodeCard() {
             </a>
           </div>
         ) : (
-          <button className="btn generate-btn" type="submit">
+          <button
+            aria-label="Generate QR Code"
+            title="Generate QR Code"
+            className="btn generate-btn"
+            type="submit"
+          >
             <FaQrcode />
             <span>Generate</span>
           </button>
